@@ -1,5 +1,6 @@
 header {
   text-align: center;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 section.body {
@@ -20,6 +21,11 @@ nav {
 input[type="text"] {
   width: 200px;
   height: 25px;
+}
+
+table th {
+  color: white;
+  background-color: #777;
 }
 
 table {
