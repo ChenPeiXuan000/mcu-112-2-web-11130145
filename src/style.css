@@ -1,13 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 header {
   text-align: center;
-  color: rgba(0, 0, 0, 0.8);
 }
-
-section.body {
-  margin: 0 auto;
-  width: 90%;
-}
-
 nav {
   margin-bottom: 10px;
 }
@@ -23,65 +20,68 @@ a:active {
 ul {
   padding-left: 0;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
-
 ul > li {
   border: solid 1px #ccc;
   padding: 8px;
   width: 80px;
   display: inline-block;
   text-align: center;
+  text-decoration: none;
 }
 
-.card {
+div.card {
+  padding: 10px;
   border: solid 1px #999;
   border-radius: 8px;
   width: 250px;
 }
-
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 input[type="text"] {
   width: 200px;
   height: 25px;
 }
-
-table th {
-  color: white;
-  background-color: #777;
-}
-
 table {
   border-collapse: collapse;
   width: 100%;
   margin: 10px 0;
 }
-
-th.td {
-  height: 30px;
-}
-
-tr:hover {
-  background-color: yellow;
-}
-
-tr > td {
-  padding: 8px;
-}
-
-tr > td.id {
+td.id {
   text-align: center;
   width: 120px;
 }
-
+th,
+td {
+  height: 30px;
+}
 td.company {
   text-align: center;
   width: 150px;
 }
-
 td.price {
   text-align: right;
   width: 100px;
 }
-
+tr > td {
+  padding: 8px;
+}
 footer {
   margin-top: 20px;
+}
+section.body {
+  margin: 0 auto;
+  width: 90%;
+}
+table th {
+  background-color: #777;
+  color: white;
+}
+tr:hover {
+  background-color: yellow;
 }

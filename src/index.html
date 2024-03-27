@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,14 +6,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header style="text-align: center">
       <h3>電子商網管理後台</h3>
     </header>
     <section class="body">
       <nav>
         <ul>
           <li>
-            <a href="./from.html">產品新增</a>
+            <a href="form.html">產品新增</a>
           </li>
           <li>
             <a>登入</a>
@@ -22,7 +21,7 @@
         </ul>
       </nav>
       <form>
-        <input type="text" placeholder="產品名稱" />
+        <input type="text" />
         <button type="button">查詢</button>
       </form>
       <table border="1">
@@ -46,23 +45,25 @@
         </tr>
       </table>
       <hr />
-      <div class="card">
-        <img src="../assests/images/01.jpg" width="100" />
-        <div>
-          <span>1.</span>
-          <span>圖像 Angular 開發入門 第二版</span>
+      <div class="card-container">
+        <div class="card">
+          <img src="../assests/images/01.jpg" width="100" />
+          <div>
+            <span>1.</span>
+            <span>圖像 Angular 開發入門 第二版</span>
+          </div>
+          <div>博碩文化</div>
+          <div>500</div>
         </div>
-        <div>博碩文化</div>
-        <div>500</div>
-      </div>
-      <div class="card">
-        <img src="../assests/images/02.jpg" width="100" />
-        <div>
-          <span>2.</span>
-          <span>金魚都能懂的 CSS 必學屬性</span>
+        <div class="card">
+          <img src="../assests/images/02.jpg" width="100" />
+          <div>
+            <span>2.</span>
+            <span>金魚都能懂的 CSS 必學屬性</span>
+          </div>
+          <div>博碩文化</div>
+          <div>500</div>
         </div>
-        <div>博碩文化</div>
-        <div>500</div>
       </div>
     </section>
     <footer>© 2024</footer>
