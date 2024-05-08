@@ -14,7 +14,7 @@ import { ProductService } from './../services/product.service';
 export class ProductPageComponent implements OnInit {
   router = inject(Router);
 
-  private ProductService!: ProductService;
+  private ProductService = inject(ProductService);
 
   products!: Product[];
 
