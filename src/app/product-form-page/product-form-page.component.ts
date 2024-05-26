@@ -2,7 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
 import { map } from 'rxjs';
-import { Product } from './../../assests/code/product';
+import { Product } from './../../assets/code/product';
 
 @Component({
   selector: 'app-product-form-page',
