@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Product } from '../model/product';
 import { ProductService } from './product.service';
 
@@ -20,8 +20,12 @@ export class ProductRemoteService extends ProductService {
     const query: { [key: string]: string | number } = { _page: pageIndex, _limit: pageSize };
     if (name !== undefined) query['name'] = name;
     const params = new HttpParams({ fromObject: query });
-    //const url = `${this.url}?_page=${pageIndex}&_limit=${pageSize}`;
     return this.httpClient.get<Product[]>(this.url, { params });
+  }
+
+  override getCount(name?: string): Observable<number> {
+    const option = name ? { params: new HttpParams().set('name', name) } : {};
+    return this.httpClient.get<Product[]>(this.url, option).pipe(map((data) => data.length));
   }
 
   override add(product: Product): Observable<Product> {
